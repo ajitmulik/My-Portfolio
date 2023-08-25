@@ -16,7 +16,7 @@ body{
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 .main .container{
-    padding: 4%;
+    padding: 2%;
     
 }
  .navbar{
@@ -31,7 +31,11 @@ body{
     top: 0;
     left: 0;
     padding: 0px 10px; 
-   
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    position: sticky;
+    z-index: 2;
+    overflow-y: hidden;
+    
   
 }
 .navbar .logo{
@@ -69,15 +73,45 @@ a:after{
 a:hover:after{
     width: 100%;
 }
+@media screen and (max-width:586px) {
+    .navbar{
+        width: 100%;
+       min-height: 20vh;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+       /* border: 1px solid black;*/
+        align-items: center;
+        box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.3);
+        top: 0;
+        left: 0;
+        padding: 0px 10px; 
+    }
+    .navbar .nav ul li{
+        display:inline-block;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-transform: capitalize;
+    }
+    .navbar .nav ul li{
+        display:inline-block;
+        padding: 0 3px;
+        font-size: 1rem;
+        text-transform: capitalize;
+    }
+    .navbar .logo h2{
+        text-align: center;
+    }
+    .navbar .logo{
+       width: 100%;
+    }
+}
 /* home*/
 
 .home{
     width: 100%;
     min-height: 80vh;
-    margin: 20px; 
-
-
-    
+    margin: 20px;   
 }
 .home .field{
     position: relative;
@@ -116,7 +150,7 @@ a:hover:after{
 .home .field .box1{
  position: absolute;
  margin-top: 12%;
- margin-left: 95%;
+ margin-left: 90%;
  padding: 10px 0;
 
  
@@ -175,6 +209,113 @@ a:hover:after{
     100%{
         transform: rotate(0deg);
     }
+}
+@media screen and (max-width:586px){
+    .home{
+        width: 100%;
+        min-height: 80vh;
+        margin: 20px; 
+    
+    
+        
+    }
+    .home .field{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    .home .field .box{
+        transform: translateY(10%);
+        border: 1px solid  rgba(113, 115, 119, 0.3);
+        width: 40%;
+       min-height: 20vh;
+        border: transparent;
+        margin-left: 5%;
+        
+       
+    }
+    .home .field .box p{
+        color: white;
+        padding: 10px;
+    }
+    .home .field .box h1{
+        color: white;
+        font-size: 2.5rem;
+        padding: 10px;
+        font-weight: bold;
+    
+    }
+    .home .field .box h3{
+        color: white;
+         padding: 10px;
+         font-family:'Roboto Condensed', sans-serif ;
+        
+    }
+    .home .field .box1{
+     position: absolute;
+     margin-top: 12%;
+     margin-left: 60%;
+     padding: 10px 0;
+    
+     
+        
+    }
+    .home .field .box1 i{
+        display: block;
+        padding: 10px;
+        background-color: crimson;
+        color: #eee;
+        margin: 15px;
+        
+    
+    
+    }
+    .home .field .box .btn {
+        text-decoration: none;
+        padding: 10px 20px;
+        color:antiquewhite;
+        background-color: crimson;
+        transition: .3s;
+        position: absolute;
+        border-radius: 7px;
+        margin-top: 15px;
+        margin-left: 150px;
+    
+    }
+    .home .field .box .btn1{
+        text-decoration: none;
+        padding: 10px 20px;
+        color:antiquewhite;
+        background-color: crimson;
+        transition: .3s;
+        position: absolute;
+        border-radius: 7px;
+        margin-top: 15px;
+        margin-left: 10px;
+    
+    }
+    .home .field .box1 i:hover{
+        animation: rot .3s linear;
+        font-weight: bold;
+        background-color: aqua;
+        color:#3a4452;
+    }
+    @keyframes rot{
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(10deg) scale(1.032);
+        }
+        75%{
+            transform: rotate(-10deg) scale(1.032); 
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    } 
 }
 
 /*about us*/
@@ -235,6 +376,64 @@ a:hover:after{
    align-items: center;
    margin: 30px;
 }
+@media screen and (max-width:586px){
+    .aboutus{
+        width: 100%;
+        min-height: 90vh;
+        position: relative;
+        display:block;
+        gap: 5%;
+        flex-wrap: wrap;
+        margin: 20px 0px;
+        box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.3);
+        
+    }
+    .aboutus .info{
+        width: 100%;
+        margin: 10px  0px;
+        text-align: center;
+    }
+    .aboutus .info h1{
+        font-size: 2rem;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+    
+    }
+    .aboutus .info h3{
+        color: white;
+       font-weight: bold;
+    }
+    .info p{
+       color: white;
+       padding: 10px;
+       font-size: 1rem;
+       line-height: 15px;
+    }
+    .aboutus .info .btn {
+        text-decoration: none;
+        padding: 10px 20px;
+        color:antiquewhite;
+        background-color: crimson;
+        transition: .3s;
+        position: absolute;
+        margin-left: -50px;
+        border-radius: 7px;
+        margin-top: 15px;
+    
+    }
+    .aboutus .img{
+        width: 100%;
+    }
+    
+    .aboutus .img img{
+       width: 180px;
+       height: 180px;
+       border-radius: 50%;
+       margin: 10px;
+       margin-left: 20%;
+    } 
+}
 
 /*skills*/
 
@@ -283,6 +482,57 @@ a:hover:after{
 }
 .skills .title:hover{
     text-decoration: underline crimson;
+}
+
+@media screen and (max-width:586px){
+    .skills{
+        width: 100%;
+        min-height: 80vh;
+        margin: 20px;
+        position: relative;
+    }
+    .skills .field {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .skills .title{
+        text-align: center;
+        padding: 30px;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        transition: .3s;
+    }
+    .skills .field .box{
+        text-align:  center;
+        width: 40%;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid black;
+        transition: .3s;
+        box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.3);
+    }
+    .skills .field .box h2{
+        font-size: 1rem;
+        color: white;
+        
+        
+    }
+    .skills .field .box p{
+        color: white;
+        padding: 20px;
+        text-align: left;
+        
+    }
+    .skills .field .box:hover{
+        transform: translateY(-10px);
+        cursor: pointer;
+        box-shadow: -6px 6px 0 0 crimson;
+    }
+    .skills .title:hover{
+        text-decoration: underline crimson;
+    }
 }
 
 /*services*/
@@ -392,6 +642,7 @@ a:hover:after{
 .contact{
   margin-top: 2rem;
   box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.3);
+ 
   
 }
 .contact .title{
@@ -407,6 +658,7 @@ a:hover:after{
     display: flex;
     flex-direction: column;
     margin: auto;
+    flex-wrap: wrap;
 
 }
 form , input ,textarea{
@@ -429,6 +681,51 @@ form input::placeholder , textarea::placeholder{
     cursor: pointer;
     background: crimson;
     justify-content: center;
+}
+@media screen and (max-width:586px){
+    .contact{
+        margin-top: 2rem;
+        box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.3);
+       
+        
+      }
+      .contact .title{
+          margin-left: -30px;
+          padding: 20px;
+          color: white;
+          font-size: 2.5rem;
+          font-weight: bold;
+          transition: .3s;
+          margin: 10px;
+      }
+      .contact form{
+          display: flex;
+          flex-direction: column;
+         /* margin: auto;*/
+          flex-wrap: wrap;
+      
+      }
+      form , input ,textarea{
+          padding: 5px;
+          border-radius: 0.5rem;
+          width: 200px;
+          border: none;
+          margin-bottom: 1rem;
+          color: black;
+          font-weight: bold;
+          margin-left: -30px;
+          
+      }
+      form input::placeholder , textarea::placeholder{
+           color: #3a4452;
+      }
+      
+      .contact-button{
+          width: 100px;
+          cursor: pointer;
+          background: crimson;
+          justify-content: center;
+      }   
 }
 /*footer*/
 footer{
